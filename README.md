@@ -30,5 +30,24 @@ Aplicación de escritorio desarrollada para la asignatura **Programación de Apl
 
 ##  Estructura del Proyecto
 
+```text
+Corte 1 [ExamenC1PAA]/
+├── .mvn/wrapper/                # Archivos del envoltorio de Maven (Maven Wrapper)
+├── src/
+│   ├── main/
+│   │   ├── java/ni/edu/uam/examenc1paa/
+│   │   │   ├── HelloApplication.java            # Clase de prueba/ejemplo inicial JavaFX
+│   │   │   ├── HelloController.java             # Controlador para la vista inicial
+│   │   │   ├── Launcher.java                    # Clase principal para iniciar la aplicación
+│   │   │   ├── RegistroSolicitudController.java # Controlador para la vista de registro de solicitudes
+│   │   │   └── Solicitud.java                   # Modelo de datos para las solicitudes
+│   │   │   └── module-info.java                 # Configuración de módulos de Java
+│   │   └── resources/ni/edu/uam/examenc1paa/
+│   │       └── hello-view.fxml                  # Vista FXML para la interfaz gráfica
+├── .gitignore                   # Archivos/carpetas ignorados por Git
+├── mvnw / mvnw.cmd              # Ejecutables de Maven Wrapper
+├── pom.xml                      # Archivo de configuración de dependencias de Maven
+└── README.md                    # Documentación del proyecto
+
 
 
