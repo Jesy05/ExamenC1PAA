@@ -8,12 +8,26 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+
+    private static Stage ventana;
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
+        ventana = stage;
+        cambiarVista("principal-view.fxml");
+        stage.setTitle("Sistema de Gestion de Solicitudes");
+        stage.setOnCloseRequest(e -> stage.close());
         stage.show();
+    }
+
+    public static void cambiarVista(String nombreVista) throws IOException {
+        FXMLLoader cargador = new FXMLLoader(HelloApplication.class.getResource(nombreVista));
+        Scene escena = new Scene(cargador.load(), 620, 520);
+        ventana.setScene(escena);
+        ventana.centerOnScreen();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 }
